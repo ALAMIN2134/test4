@@ -1,0 +1,265 @@
+/* Consolidated styles used by both pages (extracted from your earlier inline CSS) */
+
+:root {
+  --violet-500: #8B5CF6;
+  --violet-dark: #390D7A;
+  --blue-500: #3B82F6;
+  --green-500: #10B981;
+  --red-500: #EF4444;
+  --teal-500: #0D9488;
+}
+
+/* Page base */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f4f8;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Card base */
+.card-base {
+  background-color: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  width: 100%;
+}
+
+/* Top border utility (blue) */
+.card-top-blue { border-top: 5px solid var(--blue-500); }
+
+/* Time card top border variant */
+.time-card-base { border-top: 5px solid #A78BFA; }
+
+/* Inner small cards */
+.inner-card-bg { background-color: #F8F4FF; }
+
+/* Colors */
+.custom-violet { color: var(--violet-500); }
+.custom-dynamic-text { color: var(--violet-dark); }
+.class-title-color { color: var(--blue-500); }
+
+/* Shadows */
+.card-shadow-soft {
+  box-shadow: 0 4px 6px -1px rgba(139,92,246,0.05), 0 2px 4px -2px rgba(139,92,246,0.05);
+}
+
+/* Status/summary */
+.status-box { border-radius: 0.75rem; padding: 1rem; }
+.status-label { font-size: 0.875rem; font-weight: 600; }
+.status-text { font-size: 1.5rem; font-weight: 800; font-style: italic; margin-top: 0.25rem; }
+
+/* Select style */
+.select-manual-box {
+  border: 1px solid #D1D5DB;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  font-size: 1rem;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%234B5563' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+  cursor: pointer;
+}
+
+/* Summary cards */
+.summary-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.summary-icon-container { width:48px; height:48px; border-radius:0.5rem; display:flex; justify-content:center; align-items:center; margin-bottom:0.75rem; }
+.summary-label { font-size:0.875rem; color:#4b5563; margin-bottom:0.25rem; }
+.summary-value { font-size:1.875rem; font-weight:700; color:#1f2937; }
+
+/* Icon bg colors */
+.bg-total-students { background-color:#DBEAFE; }
+.bg-attended { background-color:#D1FAE5; }
+.bg-absent { background-color:#FEE2E2; }
+.bg-attendance-percent { background-color:#FFFBEB; }
+
+/* Icon colors */
+.icon-total-students { color: var(--blue-500); }
+.icon-attended { color: var(--green-500); }
+.icon-absent { color: var(--red-500); }
+.icon-attendance-percent { color: #F59E0B; }
+
+/* Mark attendance / tiles */
+.mark-attendance-card { padding:2rem; border-radius:1.5rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); background-color:#fff; width:100%; border-top:5px solid var(--blue-500); }
+.attendance-tile {
+  transition: background-color 0.2s, transform 0.1s, color 0.2s;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  user-select: none;
+  line-height: 1;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.attendance-tile-pending { background-color: #E0F2FE; color: #1E40AF; }
+.attendance-tile-present { background-color: #10B981; color: #ffffff; box-shadow: 0 4px 6px -1px rgba(16,185,129,0.4); }
+.attendance-tile-pending:hover { background-color: #BFDBFE; transform: scale(1.05); }
+.attendance-tile-present:hover { background-color: #059669; transform: scale(1.05); }
+
+/* READONLY tile variant for dashboard preview */
+.attendance-tile-readonly { cursor: default; pointer-events: none; }
+.attendance-tile-readonly.attendance-tile-pending:hover,
+.attendance-tile-readonly.attendance-tile-present:hover { transform: none; }
+
+/* Stats bar */
+.stats-bar { background-color: #f8fafc; border-radius: 1rem; padding: 1rem 1.5rem; margin: 1.5rem 0; display:flex; justify-content:space-around; flex-wrap:wrap; gap:1rem; }
+.stat-item { text-align:center; }
+.stat-label { font-size:0.875rem; color:#4b5563; margin-bottom:0.25rem; }
+.stat-value { font-size:1.5rem; font-weight:700; color:#1f2937; }
+.present-value { color: #10B981; }
+.absent-value { color: #EF4444; }
+.percent-value { color: #F59E0B; }
+
+/* Cards and small helpers */
+.card-base .text-center { text-align: center; }
+.rounded-xl { border-radius: 1rem; }
+
+/* Modal styles */
+#success-modal[aria-hidden="false"] { display:flex; }
+
+/* Utility: disabled button look */
+button:disabled { opacity: 0.6; cursor: not-allowed; transform: none !important; }
+
+/* NAVBAR consistency fix (append to bottom) */
+/* Ensure every page uses the same navbar appearance and sticky behavior */
+.site-navbar,
+nav {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  margin: 0;
+  width: 100%;
+  border-radius: 0 !important; /* ensure no rounding applied */
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+/* Remove unexpected margins or spacing that could push navbar down */
+nav > .max-w-7xl,
+nav > .max-w-7xl > .flex {
+  margin: 0;
+  padding: 0;
+}
+
+/* If some pages add body padding-top or margin, ensure navbar remains visible */
+body {
+  --navbar-height: 64px; /* default approximate navbar height */
+}
+
+/* Developer helper: fixed fallback class (use only if sticky fails due to ancestor transforms) */
+.site-navbar.fixed-fallback {
+  position: fixed !important;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Optional: When using fixed fallback, add this to body to avoid content being hidden under the navbar */
+/* .with-navbar-fixed { padding-top: var(--navbar-height); } */
+
+/* Small responsive tweaks */
+@media (max-width: 640px) {
+  .summary-value { font-size: 1.25rem; }
+  .attendance-tile { font-size: 1.1rem; }
+  nav .max-w-7xl { padding-left: 0.75rem; padding-right: 0.75rem; }
+}
+
+/* ---- Navbar logo fixed size + no scale on nav links ---- */
+.site-logo {
+  display: inline-block;
+  font-size: 1.125rem; /* 18px; adjust if you prefer */
+  line-height: 1;
+  font-weight: 800;
+  transition: none !important; /* prevent scaling/animation */
+  transform: none !important;
+  white-space: nowrap;
+}
+
+/* ensure nav links don't use transform/scale on hover — only background change */
+[data-nav], nav a {
+  transition: background-color 0.15s ease, color 0.15s ease;
+  transform: none !important;
+}
+
+/* nav link explicit styling helper if needed */
+.nav-link {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+}
+
+/* ---- Page inner wrapper: consistent max width for all pages ---- */
+.page-inner {
+  max-width: 1100px; /* pick value to match mark-attendance width (change as needed) */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+/* Make sure card uses full width of wrapper */
+.page-inner .card-base {
+  width: 100%;
+}
+
+/* Optional: slightly larger typography when wrapper is wider */
+@media (min-width: 1024px) {
+  .page-inner .summary-value { font-size: 1.875rem; }
+}
+
+/* --- User menu & welcome card styles --- */
+.user-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+}
+.user-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  min-width: 160px;
+  overflow: hidden;
+  z-index: 60;
+}
+.user-dropdown a { display: block; padding: 0.5rem 1rem; color: #111827; text-decoration: none; }
+.user-dropdown a:hover { background-color: #f3f4f6; }
+
+/* welcome card */
+.welcome-card {
+  background: linear-gradient(180deg, rgba(99,102,241,0.06), #ffffff);
+  border-left: 4px solid rgba(99,102,241,0.9);
+}
+
+/* small responsive */
+@media (max-width: 640px) {
+  .user-dropdown { right: 8px; left: auto; }
+  .page-inner { padding-left: 0.75rem; padding-right: 0.75rem; }
+}
