@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Register - Smart Attendance System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-50 min-h-screen">
+
+  <nav class="bg-indigo-700 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0 flex items-center">
+          <a href="index.html" class="site-logo text-white text-xl">Smart Attendance System</a>
+        </div>
+        <div id="nav-user" class="relative"></div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-inner p-6">
+    <div class="card-base mt-8 max-w-md mx-auto">
+      <h2 class="text-2xl font-bold mb-4">Create account</h2>
+      <form id="register-form">
+        <label class="block mb-2">
+          <span class="text-gray-700">Full name</span>
+          <input id="reg-name" type="text" required class="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+        </label>
+        <label class="block mb-2">
+          <span class="text-gray-700">Email</span>
+          <input id="reg-email" type="email" required class="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+        </label>
+        <label class="block mb-4">
+          <span class="text-gray-700">Password</span>
+          <input id="reg-password" type="password" required class="mt-1 block w-full border border-gray-300 rounded-md p-2" />
+        </label>
+        <div class="flex items-center justify-between">
+          <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded-md">Register</button>
+          <a href="login.html" class="text-indigo-600">Already have account?</a>
+        </div>
+      </form>
+      <p id="reg-msg" class="text-sm text-red-600 mt-3 hidden"></p>
+    </div>
+  </main>
+
+  <script src="assets/js/auth.js" defer></script>
+  <script src="assets/js/navbar.js" defer></script>
+</body>
+</html>
